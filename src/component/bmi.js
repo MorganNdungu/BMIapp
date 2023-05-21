@@ -1,89 +1,12 @@
 import { Button } from "react-bootstrap"; 
 import {useState} from "react";
-// import Form from 'react-bootstrap/Form';
-
-// const BmiCalc = () =>{
-//     const [Age, setAge] = useState(0);
-//     const [weight, setWeight] = useState(0);
-//     const [height, setHeight] = useState(0);
-//     const [bmi, setBMI] = useState('');
-//     const [describe, setDescribe]= useState('');
-  
-//     const calculateBMI = () => {
-      
-//         const bmi = weight / ((height/100) * (height/100));
-//         setBMI(bmi.toFixed(1))
-//         if (bmi<=18.5){
-//             describe('Underweight, eat eat')
-
-//         }
-//         else if(bmi>=18.5 && bmi <=25.0){
-//         describe('normal, kudos')
-//         }
-//         else if(bmi>=25.1 && bmi<=29.9){
-//             describe('overweight, to something')
-//             }
-//         else if(bmi>=30){
-//                 describe('obeeeeeese')
-//                 }
-
-//     }
-    
-//     // handleChange=(event)=>{
-//     //     age(event.target.value);
-//     //     }
-//     // }
-//     // change=(event)=>{
-//     //     // this.setState({
-//     //         height(event.target.value);
-        
-//     // }
-//     // handle=(event)=>{
-//     //     // this.setState({
-//     //         weight(event.target.value);
-    
-//     // }
-//     // handleSubmit=(event)=>{
-//     //     event.preventDefault();
-//     //     console.log({
-//     //         Age:this.state.age,
-//     //         Height:this.state.height,
-//     //         Weight:this.state.height
-//     //     })
-//     // }
-//         return(
-            
-            
-//                 <Form className="container">
-//                     <h1 className="title">BMI calculator</h1>
-//                     <Form.Label> Age</Form.Label><br></br>
-//                     <Form.Control type="number"  value={Age} placeholder="Enter your age" onChangeText={(numeric)=>setAge(numeric)}/><br></br>
-                    
-            
-//                     <Form.Label> Height</Form.Label><br></br>
-//                     <Form.Control type="number" value={height} placeholder="enter your height" onChangeText={(text)=>setHeight(text)} /><br></br>
-
-//                     <Form.Label> Weight</Form.Label><br></br>
-//                     <Form.Control type="number" value={weight} placeholder="enter weight in KG" onChangeText={(text)=>setWeight(text)} /><br></br>
-                  
-//                   <Button variant="primary" type="submit">Calculate </Button>
-//                   <Button variant="primary" type="submit">reset </Button>
-
-
-//                 </Form>  
-//         )
-    
-
-// }
-// export default BmiCalc;
-
-// changes
+// 
 
 const BmiCalc = () =>{
 
-    const [Age, setAge] = useState(0);
-    const [weight, setWeight] = useState(0);
-    const [height, setHeight] = useState(0);
+    const [Age, setAge] = useState('');
+    const [weight, setWeight] = useState('');
+    const [height, setHeight] = useState('');
     const [bmi, setBmi] = useState('');
     const [describe, setDescribe]= useState('');
 
@@ -155,6 +78,9 @@ const BmiCalc = () =>{
         <div className='center'>
           <h3>your BMI is: {bmi}</h3>
           <p>{describe}</p>
+
+          <h4>your age is:</h4>
+          <p>{Age}</p>
 
           <div className='img'>
             <img src={imgsrc} alt=''></img>
